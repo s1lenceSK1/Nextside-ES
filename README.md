@@ -52,7 +52,7 @@ Puedes ver una demo online [aquí](https://nextside-es.vercel.app/) *(si el link
 
 ## ✨ Créditos y fundadores
 
-- [S1lence (Sk1lla)](https://github.com/s1lenceSK1)
+- [s1lenceSK1](https://github.com/s1lenceSK1)
 - [deltaccak](https://github.com/deltaccak)
 
 ---
@@ -60,7 +60,7 @@ Puedes ver una demo online [aquí](https://nextside-es.vercel.app/) *(si el link
 ## 🤝 ¿Quieres unirte?
 
 ¡Súmate a la comunidad y lleva tu código al siguiente nivel!  
-[Únete a Discord](https://discord.gg/s6mH3fFWRx)
+[Únete a Discord](https://discord.gg/W7jwy2NdQu)
 
 ---
 
