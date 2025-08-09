@@ -6,7 +6,7 @@
 <title>Nextside — Comunidad de programacion web</title>
 <link rel="icon" href="next.png" type="image/x-icon">
 
-  <meta property="og:title" content="Nextside — Comunidad de programacion web">
+<meta property="og:title" content="Nextside — Comunidad de programacion web">
 <meta property="og:description" content="Comunidad de desarrolladores web, frontend y backend. En donde podes preguntar lo que quieras sobre programacion, promocionar proyectos, y conocer nuevos desarrolladores de cualquier parte del mundo.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nextside-es.vercel.app/">
@@ -14,199 +14,312 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
-   
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+<!-- Animated Background -->
+<div class="animated-bg">
+<div class="floating-shape shape-1"></div>
+<div class="floating-shape shape-2"></div>
+<div class="floating-shape shape-3"></div>
+<div class="floating-shape shape-4"></div>
+<div class="floating-shape shape-5"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
 <div class="container">
 <a class="navbar-brand d-flex align-items-center" href="#home">
-<img src="next.png" alt="Nextside Logo" style="height: 40px; margin-right: 10px;">
-Nextside
+<div class="logo-wrapper">
+<img src="next.png" alt="Nextside Logo" class="logo-img">
+<div class="logo-glow"></div>
+</div>
+<span class="brand-text">Nextside</span>
 </a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-<span class="navbar-toggler-icon"></span>
+<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span></span>
+<span></span>
+<span></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarNav">
 <ul class="navbar-nav ms-auto">
 <li class="nav-item">
-<a class="nav-link" href="#home">Inicio</a>
+<a class="nav-link nav-link-custom" href="#home">Inicio</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#features">Características</a>
+<a class="nav-link nav-link-custom" href="#features">Características</a>
 </li>
-
 <li class="nav-item">
-<a class="nav-link" href="#contact">Unirse</a>
+<a class="nav-link nav-link-custom" href="#community">Comunidad</a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-link-custom" href="#cta-section">Unirse</a>
 </li>
 </ul>
 </div>
 </div>
 </nav>
 
-<!--------------------- Hero---------------->
+<!-- Hero Section -->
 <section id="home" class="hero">
+<div class="hero-particles">
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+</div>
 <div class="container">
-<div class="row align-items-center">
+<div class="row align-items-center min-vh-100">
 <div class="col-lg-6 hero-content">
-<h1 class="fade-in">Bienvenido a <span style="color: var(--primary-gold)">Nextside</span></h1>
-<p class="hero-subtitle fade-in">La comunidad de programación web donde developers novatos y expertos se conectan, aprenden y crecen juntos. Especialízate en desarrollo web con el apoyo de una comunidad vibrante.</p>
-<div class="fade-in">
-<a href="#community" class="btn-primary-custom me-3">Únete Ahora</a>
-<a href="#features" class="btn-outline-custom">Explorar</a>
+<br>
+<br>
+<h1 class="hero-title animate-slide-up" style="animation-delay: 0.2s">
+Únete a <span class="gradient-text">Nextside</span>
+</h1>
+<p class="hero-subtitle animate-slide-up" style="animation-delay: 0.4s">
+La comunidad de programación web donde developers novatos y expertos se conectan, aprenden y crecen juntos. Especialízate en desarrollo web con el apoyo de una comunidad vibrante.
+</p>
+<div class="hero-buttons animate-slide-up" style="animation-delay: 0.6s">
+<a href="#community" class="btn-primary-enhanced me-3">
+<span>Únete Ahora</span>
+<i class="fas fa-arrow-right"></i>
+</a>
+<a href="#features" class="btn-outline-enhanced">
+<span>Explorar</span>
+<i class="fas fa-compass"></i>
+</a>
+</div>
+<div class="hero-stats animate-slide-up" style="animation-delay: 0.8s">
+<div class="stat-item">
+<div class="stat-number">20+</div>
+<div class="stat-label">Desarrolladores</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">24/7</div>
+<div class="stat-label">Soporte</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">100%</div>
+<div class="stat-label">Gratis</div>
 </div>
 </div>
+</div>
+
+
 <div class="col-lg-6">
-<div class="logo-container fade-in">
-<img src="next.png" alt="Nextside Logo" class="img-fluid">
+<div class="hero-visual animate-float">
+<div class="code-window">
+<div class="window-header">
+<div class="window-controls">
+<span class="control red"></span>
+<span class="control yellow"></span>
+<span class="control green"></span>
+</div>
+<div class="window-title">welcome.js</div>
+</div>
+<div class="code-content">
+<div class="code-line">
+<span class="code-keyword">const</span> 
+<span class="code-variable">nextside</span> 
+<span class="code-operator">=</span> 
+<span class="code-string">"awesome"</span><span class="code-semicolon">;</span>
+</div>
+<div class="code-line">
+<span class="code-keyword">function</span> 
+<span class="code-function">joinCommunity</span><span class="code-bracket">()</span> 
+<span class="code-bracket">{</span>
+</div>
+<div class="code-line code-indent">
+<span class="code-keyword">return</span> 
+<span class="code-string">"Learn with us!"</span><span class="code-semicolon">;</span>
+</div>
+<div class="code-line">
+<span class="code-bracket">}</span>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-
+<!-- Features Section -->
 <section id="features" class="features">
+<div class="section-bg">
+<div class="bg-pattern"></div>
+</div>
 <div class="container">
-<div class="section-title fade-in">
-<h2>¿Por qué unirse a Nextside?</h2>
-<p>Descubre todas las ventajas de formar parte de nuestra comunidad de desarrollo web</p>
+<div class="section-header text-center">
+<div class="section-badge animate-on-scroll">
+<i class="fas fa-star"></i>
+<span>Características</span>
+</div>
+<h2 class="section-title animate-on-scroll">¿Por qué unirse a <span class="gradient-text">Nextside</span>?</h2>
+<p class="section-description animate-on-scroll">Descubre todas las ventajas de formar parte de nuestra comunidad de desarrollo web</p>
 </div>
 
-
-<div class="row g-4">
-<div class="col-lg-4 col-md-6">
-<div class="feature-card fade-in">
+<div class="features-grid">
+<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.1s">
+<div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-code"></i>
 </div>
+<div class="icon-background"></div>
+</div>
 <h4>Canales Especializados</h4>
 <p>Tenemos canales dedicados para cada lenguaje y tecnología web: JavaScript, React, Vue, Angular, Node.js, Python, PHP y mucho más.</p>
+<div class="card-glow"></div>
 </div>
-</div>
 
-
-
-<div class="col-lg-4 col-md-6">
-<div class="feature-card fade-in">
+<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.2s">
+<div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-users"></i>
+</div>
+<div class="icon-background"></div>
 </div>
 <h4>Comunidad Activa</h4>
 <p>Conecta con developers de todos los niveles. Desde principiantes hasta seniors, todos comparten conocimiento y experiencias.</p>
+<div class="card-glow"></div>
 </div>
-</div>
 
-
-
-<div class="col-lg-4 col-md-6">
-<div class="feature-card fade-in">
+<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.3s">
+<div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-graduation-cap"></i>
 </div>
+<div class="icon-background"></div>
+</div>
 <h4>Crece a tu Ritmo</h4>
 <p>Aprendé cosas nuevas cada semana con desafíos, talleres y charlas entre miembros. No importa tu nivel, siempre podés sumar algo nuevo.</p>
+<div class="card-glow"></div>
 </div>
-</div>
 
-
-
-
-<div class="col-lg-4 col-md-6">
-<div class="feature-card fade-in">
+<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.4s">
+<div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-rocket"></i>
 </div>
+<div class="icon-background"></div>
+</div>
 <h4>Proyectos en Comunidad</h4>
 <p>Sumate a ideas grupales, creá tus propios proyectos o colaborá con otros para aprender haciendo y compartir lo que sabés.</p>
+<div class="card-glow"></div>
 </div>
-</div>
 
-
-
-<div class="col-lg-4 col-md-6">
-<div class="feature-card fade-in">
+<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.5s">
+<div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-question-circle"></i>
 </div>
+<div class="icon-background"></div>
+</div>
 <h4>Ayuda entre Pares</h4>
 <p>¿Te trabaste con algo? Siempre hay alguien en la comunidad dispuesto a darte una mano con tus dudas o revisar tu código.</p>
+<div class="card-glow"></div>
 </div>
-</div>
 
-
-
-<div class="col-lg-4 col-md-6">
-<div class="feature-card fade-in">
+<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.6s">
+<div class="feature-icon-wrapper">
 <div class="feature-icon">
-<i class="fas fa-users"></i>
+<i class="fas fa-heart"></i>
+</div>
+<div class="icon-background"></div>
 </div>
 <h4>Conexiones Reales</h4>
 <p>No se trata de empresas, sino de gente como vos. Acá vas a encontrar amistades, colaboraciones y un espacio donde compartir lo que te gusta.</p>
+<div class="card-glow"></div>
 </div>
-</div>
-
 </div>
 </div>
 </section>
 
 
 
+<!-- CTA Section -->
+ <section id = "cta-section"> </section>
 <section class="cta-section">
+
+<div class="cta-bg">
+<div class="cta-pattern"></div>
+</div>
 <div class="container">
-<div class="fade-in">
-<h2>¿Listo para llevar tu código al siguiente nivel?</h2>
-<p>Únete a Nextside hoy y comienza tu viaje hacia convertirte en un mejor developer web</p>
-<a href="https://discord.gg/s6mH3fFWRx" class="btn-primary-custom btn-lg">Unirse a Discord</a>
+<div class="cta-content animate-on-scroll">
+<div class="cta-icon">
+<i class="fas fa-rocket"></i>
+</div>
+<h2>¿Listo para llevar tu código al <span class="gradient-text">siguiente nivel</span>?</h2>
+<p>Únete a Nextside hoy y comienza tu viaje hacia convertirte en un mejor desarrollador web</p>
+<a href="https://discord.gg/s6mH3fFWRx" class="btn-cta">
+<span>Unirse a Discord</span>
+<i class="fab fa-discord"></i>
+</a>
 </div>
 </div>
 </section>
 
 <!-- Footer -->
 <footer id="contact" class="footer">
+<div class="footer-bg">
+<div class="footer-pattern"></div>
+</div>
 <div class="container">
 <div class="footer-content">
-<div class="footer-section">
-<h5>Nextside</h5>
-<p style="color: rgba(255, 255, 255, 0.8);">La comunidad de programación web más vibrante y colaborativa. Juntos construimos el futuro del desarrollo web.</p>
+<div class="footer-section main-section">
+<div class="footer-logo">
+<img src="next.png" alt="Nextside Logo">
+<span>Nextside</span>
 </div>
-   
+<p>La comunidad de programación web más vibrante y colaborativa. Juntos construimos el futuro del desarrollo web.</p>
+<div class="social-links">
+<a href="https://discord.gg/s6mH3fFWRx" class="social-link">
+<i class="fab fa-discord"></i>
+</a>
+
+
+</div>
+</div>
+ 
 <div class="footer-section">
 <h5>Frontend</h5>
-<a href="https://lenguajehtml.com/">HTML5</a>
-<a href="https://lenguajecss.com/css/">CSS3</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
- 
+<a href="https://lenguajehtml.com/"><i class="fab fa-html5"></i>HTML5</a>
+<a href="https://lenguajecss.com/css/"><i class="fab fa-css3-alt"></i>CSS3</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><i class="fab fa-js-square"></i>JavaScript</a>
 </div>
 
-  <div class="footer-section">
+<div class="footer-section">
 <h5>Backend</h5>
-<a href="https://nodejs.org/docs/latest/api/">Node.js</a>
-<a href="https://docs.python.org/3/">Python</a>
-<a href="https://www.php.net/docs.php">PHP</a>
-<a href="https://dev.mysql.com/doc/">MySQL</a>
+<a href="https://nodejs.org/docs/latest/api/"><i class="fab fa-node-js"></i>Node.js</a>
+<a href="https://docs.python.org/3/"><i class="fab fa-python"></i>Python</a>
+<a href="https://www.php.net/docs.php"><i class="fab fa-php"></i>PHP</a>
+<a href="https://dev.mysql.com/doc/"><i class="fas fa-database"></i>MySQL</a>
 </div>
+
 <div class="footer-section">
 <h5>Fundadores</h5>
-<a href="https://github.com/s1lenceSK1"><i class="fab fa-github me-2"></i>S1lence</a>
-<a href="https://github.com/deltaccak"><i class="fab fa-github me-2"></i>deltaccak</a>
-
+<a href="https://github.com/s1lenceSK1"><i class="fab fa-github"></i>S1lence</a>
+<a href="https://github.com/deltaccak"><i class="fab fa-github"></i>deltaccak</a>
 </div>
 </div>
 <div class="footer-bottom">
+<div class="footer-bottom-content">
 <p>&copy; 2025 Nextside. By @deltaccak</p>
+<a href="#home" class="back-to-top">
+<i class="fas fa-arrow-up"></i>
+</a>
+</div>
 </div>
 </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
-  
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function (e) {
@@ -221,7 +334,6 @@ block: 'start'
 });
 });
 
-
 const observerOptions = {
 threshold: 0.1,
 rootMargin: '0px 0px -50px 0px'
@@ -230,74 +342,77 @@ rootMargin: '0px 0px -50px 0px'
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
 if (entry.isIntersecting) {
-entry.target.classList.add('visible');
+entry.target.classList.add('animate-visible');
+
+if (entry.target.classList.contains('stats-wrapper')) {
+animateCounters();
+}
 }
 });
 }, observerOptions);
 
 
-document.querySelectorAll('.fade-in').forEach(el => {
+document.querySelectorAll('.animate-on-scroll, .animate-slide-up, .animate-float').forEach(el => {
 observer.observe(el);
 });
 
-function animateCounter(element, target, duration = 2000) {
+
+function animateCounters() {
+document.querySelectorAll('.stat-number').forEach(counter => {
+const target = parseInt(counter.getAttribute('data-target'));
+const duration = 2000;
 let start = 0;
 const increment = target / (duration / 16);
 
 const updateCounter = () => {
 start += increment;
 if (start < target) {
-element.textContent = Math.floor(start);
+counter.textContent = Math.floor(start);
 requestAnimationFrame(updateCounter);
 } else {
-element.textContent = target;
+counter.textContent = target + (target < 100 ? '+' : '');
 }
 };
 
 updateCounter();
-}
-
-
-const statsObserver = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-const counters = entry.target.querySelectorAll('.stat-number');
-counters.forEach(counter => {
-const target = parseInt(counter.getAttribute('data-target'));
-animateCounter(counter, target);
 });
-statsObserver.unobserve(entry.target);
-}
-});
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.stats-container');
-if (statsSection) {
-statsObserver.observe(statsSection);
 }
 
 
 window.addEventListener('scroll', () => {
-const navbar = document.querySelector('.navbar');
-if (window.scrollY > 100) {
-navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-navbar.style.boxShadow = '0 2px 30px rgba(212, 167, 81, 0.15)';
+const navbar = document.getElementById('navbar');
+const scrolled = window.pageYOffset;
+
+if (scrolled > 100) {
+navbar.classList.add('scrolled');
 } else {
-navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-navbar.style.boxShadow = '0 2px 20px rgba(212, 167, 81, 0.1)';
+navbar.classList.remove('scrolled');
 }
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('scroll', () => {
+const scrolled = window.pageYOffset;
+const parallaxElements = document.querySelectorAll('.hero-particles .particle');
 
-setTimeout(() => {
-document.querySelectorAll('.hero .fade-in').forEach((el, index) => {
-setTimeout(() => {
-el.classList.add('visible');
-}, index * 200);
+parallaxElements.forEach((element, index) => {
+const speed = 0.5 + (index * 0.1);
+element.style.transform = `translateY(${scrolled * speed}px)`;
 });
-}, 300);
+});
+
+
+window.addEventListener('load', () => {
+document.body.classList.add('loaded');
+});
+
+
+document.addEventListener('mousemove', (e) => {
+const cursor = document.querySelector('.custom-cursor');
+if (cursor) {
+cursor.style.left = e.clientX + 'px';
+cursor.style.top = e.clientY + 'px';
+}
 });
 </script>
 </body>
