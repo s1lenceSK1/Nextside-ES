@@ -1,27 +1,12 @@
-# Nextside — Comunidad de programación web
+# Nextside — Comunidad de Programación
 
 <img src="next.png" alt="Nextside logo" width="160" style="margin-bottom: 15px;" />
 
-Nextside es una **comunidad para desarrolladores web**, donde tanto principiantes como expertos pueden aprender, compartir, crear y crecer juntos. Es un espacio abierto para hacer networking, resolver dudas, encontrar proyectos y generar vínculos dentro del mundo de la programación web.
+Nextside es una **comunidad para desarrolladores de todo tipo**, donde tanto principiantes como expertos pueden aprender, compartir, crear y crecer juntos. Es un espacio abierto para hacer networking, resolver dudas, encontrar proyectos y generar vínculos dentro del mundo de la programación.
 
 ---
 
-## Contenido del proyecto
 
-- **index.html**  
-  Página principal con la estructura y contenido del sitio. Incluye secciones como:
-  - Portada/Hero
-  - Características de la comunidad
-  - Invitación a Discord
-  - Footer con recursos y fundadores
-
-- **style.css**  
-  Hoja de estilos personalizada con paleta dorada, animaciones suaves, diseño responsivo y estilos para cada sección.
-
-- **next.png**  
-  Logo principal de Nextside utilizado en la web.
-
----
 
 ## Características principales
 
@@ -32,11 +17,6 @@ Nextside es una **comunidad para desarrolladores web**, donde tanto principiante
 - Invitación directa a la comunidad en Discord  
 - Footer con enlaces a los perfiles de los fundadores  
 
----
-
-## Vista previa
-
-Puedes acceder a una demo en línea [aquí](https://nextside-es.vercel.app/) *(si está disponible)*.
 
 ---
 
@@ -58,7 +38,7 @@ Puedes acceder a una demo en línea [aquí](https://nextside-es.vercel.app/) *(s
 
 ---
 
-## Créditos y fundadores
+## Fundadores
 
 - [s1lenceSK1](https://github.com/s1lenceSK1)  
 - [deltaccak](https://github.com/deltaccak)  
