@@ -68,13 +68,19 @@ overflow-x: hidden;
   overflow: hidden;
 }
 
-.floating-shape {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--gradient-primary);
-  opacity: 0.03;
-  animation: floatAdvanced 25s infinite linear;
-  filter: blur(1px);
+/* Desactiva animaciones en móviles */
+@media (max-width: 768px) {
+  .floating-shape,
+  .bg-pattern,
+  .particle {
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  /* Reduce animaciones a lo esencial */
+  .modern-card:hover {
+    transform: translateY(-5px) !important; /* En lugar de -15px scale(1.02) */
+  }
 }
 
 .shape-1 {
@@ -1507,3 +1513,29 @@ body.loaded .animate-on-scroll {
     transition-duration: 0.01ms !important;
   }
 }
+@media (max-width: 768px) {
+  .navbar,
+  .modern-card,
+  .social-link {
+    backdrop-filter: none !important;
+    background: rgba(13, 17, 23, 0.95) !important; /* Color sólido */
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    will-change: auto !important; /* Quita will-change en móviles */
+  }
+}
+@media (max-width: 768px) {
+  .modern-card,
+  .btn-primary-enhanced,
+  .feature-icon {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important; /* Sombra simple */
+  }
+  
+  .modern-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15) !important;
+  }
+}
+

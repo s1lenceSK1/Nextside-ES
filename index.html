@@ -4,69 +4,79 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nextside — Comunidad de programacion web</title>
-<link rel="icon" href="next.png" type="image/x-icon">
+<link rel="icon" href="iconns.png" type="image/x-icon">
 
+<!-- Preload critical resources -->
+<link rel="preload" href="style.css" as="style">
+<link rel="preload" href="iconns.png" as="image">
+
+<!-- Meta tags -->
 <meta property="og:title" content="Nextside — Comunidad de Programacion">
-<meta property="og:description" content="Comunidad de desarrolladores, frontend, backend, mobile, game devs. En donde podes preguntar lo que quieras sobre programacion, promocionar proyectos, y conocer nuevos desarrolladores de cualquier parte del mundo.">
+<meta property="og:description" content="Comunidad global de desarrolladores de frontend, backend, mobile y videojuegos. Un espacio para resolver dudas, compartir proyectos y conectar con programadores de todo el mundo.">
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nextside-es.vercel.app/">
-<meta property="og:image" content="https://i.imgur.com/OYEOxaE.png">
+<meta property="og:image" content="https://i.imgur.com/SwiKxtI.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
-</head>
-<body>
 
-<!-- Animated Background -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="style.css" rel="stylesheet">
+
+
+<script>
+const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+if (isMobile) {
+  document.documentElement.classList.add('is-mobile');
+}
+</script>
+</head>
+<body >
+
+<!---------------- shapes ----------------->
 <div class="animated-bg">
 <div class="floating-shape shape-1"></div>
 <div class="floating-shape shape-2"></div>
 <div class="floating-shape shape-3"></div>
-<div class="floating-shape shape-4"></div>
-<div class="floating-shape shape-5"></div>
+
 </div>
 
-<!-- Navigation -->
+<!-------------- Navigation ------------>
 <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
 <div class="container">
 <a class="navbar-brand d-flex align-items-center" href="#home">
 <div class="logo-wrapper">
-<img src="next.png" alt="Nextside Logo" class="logo-img">
-<div class="logo-glow"></div>
+<img src="iconns.png" alt="Nextside Logo" class="logo-img" loading="eager" width="45" height="45">
+
 </div>
 <span class="brand-text">Nextside</span>
 </a>
-<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
 <span></span>
 <span></span>
 <span></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarNav">
 <ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link nav-link-custom" href="staff.html" rel="noopener">Nosotros</a>
+</li>
 
 <li class="nav-item">
-<a class="nav-link nav-link-custom" href="https://github.com/s1lenceSK1">S1lence</a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-link-custom" href="https://github.com/deltaccak">deltaccak</a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-link-custom" href="https://discord.gg/s6mH3fFWRx">Unirse</a>
+<a class="nav-link nav-link-custom" href="https://discord.gg/s6mH3fFWRx" rel="noopener">Unirse</a>
 </li>
 </ul>
 </div>
 </div>
 </nav>
 
-<!-- Hero Section -->
+<!------------ Hero Section  ---------->
 <section id="home" class="hero">
+<!-- REDUCIDO: Solo 3 particles en lugar de 5 -->
 <div class="hero-particles">
-<div class="particle"></div>
-<div class="particle"></div>
 <div class="particle"></div>
 <div class="particle"></div>
 <div class="particle"></div>
@@ -74,16 +84,17 @@
 <div class="container">
 <div class="row align-items-center min-vh-100">
 <div class="col-lg-6 hero-content">
-<br>
-<br>
-<h1 class="hero-title animate-slide-up" style="animation-delay: 0.2s">
+
+ <br>
+ <br>
+<h1 class="hero-title">
 Únete a <span class="gradient-text">Nextside</span>
 </h1>
-<p class="hero-subtitle animate-slide-up" style="animation-delay: 0.4s">
+<p class="hero-subtitle">
 La comunidad de programación web donde developers novatos y expertos se conectan, aprenden y crecen juntos. Especialízate en cualquier lenguaje, sea frontend, backend, mobile o game developer, con el apoyo de una comunidad vibrante.
 </p>
-<div class="hero-buttons animate-slide-up" style="animation-delay: 0.6s">
-<a href="#community" class="btn-primary-enhanced me-3">
+<div class="hero-buttons">
+<a href="#features" class="btn-primary-enhanced me-3">
 <span>Únete Ahora</span>
 <i class="fas fa-arrow-right"></i>
 </a>
@@ -92,7 +103,7 @@ La comunidad de programación web donde developers novatos y expertos se conecta
 <i class="fas fa-compass"></i>
 </a>
 </div>
-<div class="hero-stats animate-slide-up" style="animation-delay: 0.8s">
+<div class="hero-stats">
 <div class="stat-item">
 <div class="stat-number">40+</div>
 <div class="stat-label">Desarrolladores</div>
@@ -108,15 +119,14 @@ La comunidad de programación web donde developers novatos y expertos se conecta
 </div>
 </div>
 
-
 <div class="col-lg-6">
-<div class="hero-visual animate-float">
+<div class="hero-visual">
 <div class="code-window">
 <div class="window-header">
 <div class="window-controls">
-<span class="control red"></span>
-<span class="control yellow"></span>
-<span class="control green"></span>
+<span class="control red" role="presentation"></span>
+<span class="control yellow" role="presentation"></span>
+<span class="control green" role="presentation"></span>
 </div>
 <div class="window-title">welcome.js</div>
 </div>
@@ -147,114 +157,100 @@ La comunidad de programación web donde developers novatos y expertos se conecta
 </div>
 </section>
 
-<!-- Features Section -->
+<!------------ Features Section ------------>
 <section id="features" class="features">
 <div class="section-bg">
 <div class="bg-pattern"></div>
 </div>
 <div class="container">
 <div class="section-header text-center">
-<div class="section-badge animate-on-scroll">
+<div class="section-badge">
 <i class="fas fa-star"></i>
 <span>Características</span>
 </div>
-<h2 class="section-title animate-on-scroll">¿Por qué unirse a <span class="gradient-text">Nextside</span>?</h2>
-<p class="section-description animate-on-scroll">Descubre todas las ventajas de formar parte de nuestra comunidad de desarrollo web</p>
+<h2 class="section-title">¿Por qué unirse a <span class="gradient-text">Nextside</span>?</h2>
+<p class="section-description">Descubre todas las ventajas de formar parte de nuestra comunidad de desarrollo web</p>
 </div>
 
 <div class="features-grid">
-<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.1s">
+<div class="feature-card modern-card">
 <div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-code"></i>
 </div>
-<div class="icon-background"></div>
+
 </div>
 <h4>Canales Especializados</h4>
 <p>Tenemos canales dedicados para cada lenguaje y tecnología web: JavaScript, React, Vue, Angular, Node.js, Python, PHP y mucho más.</p>
-<div class="card-glow"></div>
+
 </div>
 
-<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.2s">
+<div class="feature-card modern-card">
 <div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-users"></i>
 </div>
-<div class="icon-background"></div>
 </div>
 <h4>Comunidad Activa</h4>
 <p>Conecta con developers de todos los niveles. Desde principiantes hasta seniors, todos comparten conocimiento y experiencias.</p>
-<div class="card-glow"></div>
 </div>
 
-<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.3s">
+<div class="feature-card modern-card">
 <div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-graduation-cap"></i>
 </div>
-<div class="icon-background"></div>
 </div>
 <h4>Crece a tu Ritmo</h4>
 <p>Aprendé cosas nuevas cada semana con desafíos, talleres y charlas entre miembros. No importa tu nivel, siempre podés sumar algo nuevo.</p>
-<div class="card-glow"></div>
 </div>
 
-<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.4s">
+<div class="feature-card modern-card">
 <div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-rocket"></i>
 </div>
-<div class="icon-background"></div>
 </div>
 <h4>Proyectos en Comunidad</h4>
 <p>Sumate a ideas grupales, creá tus propios proyectos o colaborá con otros para aprender haciendo y compartir lo que sabés.</p>
-<div class="card-glow"></div>
 </div>
 
-<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.5s">
+<div class="feature-card modern-card">
 <div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-question-circle"></i>
 </div>
-<div class="icon-background"></div>
 </div>
 <h4>Ayuda entre Pares</h4>
 <p>¿Te trabaste con algo? Siempre hay alguien en la comunidad dispuesto a darte una mano con tus dudas o revisar tu código.</p>
-<div class="card-glow"></div>
 </div>
 
-<div class="feature-card modern-card animate-on-scroll" style="animation-delay: 0.6s">
+<div class="feature-card modern-card">
 <div class="feature-icon-wrapper">
 <div class="feature-icon">
 <i class="fas fa-heart"></i>
 </div>
-<div class="icon-background"></div>
 </div>
 <h4>Conexiones Reales</h4>
 <p>No se trata de empresas, sino de gente como vos. Acá vas a encontrar amistades, colaboraciones y un espacio donde compartir lo que te gusta.</p>
-<div class="card-glow"></div>
 </div>
 </div>
 </div>
 </section>
 
-
-
-<!-- CTA Section -->
- <section id = "cta-section"> </section>
+<!------------ CTA Section ------------>
 <section class="cta-section">
-
 <div class="cta-bg">
 <div class="cta-pattern"></div>
 </div>
 <div class="container">
-<div class="cta-content animate-on-scroll">
+<div class="cta-content">
 <div class="cta-icon">
 <i class="fas fa-rocket"></i>
 </div>
 <h2>¿Listo para llevar tu código al <span class="gradient-text">siguiente nivel</span>?</h2>
 <p>Únete a Nextside hoy y comienza tu viaje hacia convertirte en un mejor desarrollador web</p>
-<a href="https://discord.gg/s6mH3fFWRx" class="btn-cta">
+<a href="https://discord.gg/s6mH3fFWRx" class="btn-cta" rel="noopener">
 <span>Unirse a Discord</span>
 <i class="fab fa-discord"></i>
 </a>
@@ -262,7 +258,7 @@ La comunidad de programación web donde developers novatos y expertos se conecta
 </div>
 </section>
 
-<!-- Footer -->
+<!------------ Footer ------------>
 <footer id="contact" class="footer">
 <div class="footer-bg">
 <div class="footer-pattern"></div>
@@ -271,44 +267,42 @@ La comunidad de programación web donde developers novatos y expertos se conecta
 <div class="footer-content">
 <div class="footer-section main-section">
 <div class="footer-logo">
-<img src="next.png" alt="Nextside Logo">
+<img src="iconns.png" alt="Nextside Logo" loading="lazy" width="45" height="45">
 <span>Nextside</span>
 </div>
 <p>La comunidad de programación web más vibrante y colaborativa. Juntos construimos el futuro del desarrollo web.</p>
 <div class="social-links">
-<a href="https://discord.gg/s6mH3fFWRx" class="social-link">
+<a href="https://discord.gg/s6mH3fFWRx" class="social-link" rel="noopener" aria-label="Discord">
 <i class="fab fa-discord"></i>
 </a>
-
-
 </div>
 </div>
  
 <div class="footer-section">
 <h5>Frontend</h5>
-<a href="https://lenguajehtml.com/"><i class="fab fa-html5"></i>HTML5</a>
-<a href="https://lenguajecss.com/css/"><i class="fab fa-css3-alt"></i>CSS3</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><i class="fab fa-js-square"></i>JavaScript</a>
+<a href="https://lenguajehtml.com/" rel="noopener"><i class="fab fa-html5"></i>HTML5</a>
+<a href="https://lenguajecss.com/css/" rel="noopener"><i class="fab fa-css3-alt"></i>CSS3</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" rel="noopener"><i class="fab fa-js-square"></i>JavaScript</a>
 </div>
 
 <div class="footer-section">
 <h5>Backend</h5>
-<a href="https://nodejs.org/docs/latest/api/"><i class="fab fa-node-js"></i>Node.js</a>
-<a href="https://docs.python.org/3/"><i class="fab fa-python"></i>Python</a>
-<a href="https://www.php.net/docs.php"><i class="fab fa-php"></i>PHP</a>
-<a href="https://dev.mysql.com/doc/"><i class="fas fa-database"></i>MySQL</a>
+<a href="https://nodejs.org/docs/latest/api/" rel="noopener"><i class="fab fa-node-js"></i>Node.js</a>
+<a href="https://docs.python.org/3/" rel="noopener"><i class="fab fa-python"></i>Python</a>
+<a href="https://www.php.net/docs.php" rel="noopener"><i class="fab fa-php"></i>PHP</a>
+<a href="https://dev.mysql.com/doc/" rel="noopener"><i class="fas fa-database"></i>MySQL</a>
 </div>
 
 <div class="footer-section">
 <h5>Fundadores</h5>
-<a href="https://github.com/s1lenceSK1"><i class="fab fa-github"></i>S1lence</a>
-<a href="https://github.com/deltaccak"><i class="fab fa-github"></i>deltaccak</a>
+<a href="https://github.com/s1lenceSK1" rel="noopener"><i class="fab fa-github"></i>S1lence</a>
+<a href="https://github.com/deltaccak" rel="noopener"><i class="fab fa-github"></i>deltaccak</a>
 </div>
 </div>
 <div class="footer-bottom">
 <div class="footer-bottom-content">
 <p>&copy; 2025 Nextside. By @deltaccak</p>
-<a href="#home" class="back-to-top">
+<a href="#home" class="back-to-top" aria-label="Volver arriba">
 <i class="fas fa-arrow-up"></i>
 </a>
 </div>
@@ -316,102 +310,101 @@ La comunidad de programación web donde developers novatos y expertos se conecta
 </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
 <script>
 
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) {
-e.preventDefault();
-const target = document.querySelector(this.getAttribute('href'));
-if (target) {
-target.scrollIntoView({
-behavior: 'smooth',
-block: 'start'
-});
-}
-});
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: isMobile ? 'auto' : 'smooth', // Smooth solo en desktop
+        block: 'start'
+      });
+    }
+  });
 });
 
+
 const observerOptions = {
-threshold: 0.1,
-rootMargin: '0px 0px -50px 0px'
+  threshold: isMobile ? 0.05 : 0.1, // Threshold menor en móviles
+  rootMargin: isMobile ? '0px' : '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('animate-visible');
-
-if (entry.target.classList.contains('stats-wrapper')) {
-animateCounters();
-}
-}
-});
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-visible');
+    }
+  });
 }, observerOptions);
 
 
-document.querySelectorAll('.animate-on-scroll, .animate-slide-up, .animate-float').forEach(el => {
-observer.observe(el);
-});
-
-
-function animateCounters() {
-document.querySelectorAll('.stat-number').forEach(counter => {
-const target = parseInt(counter.getAttribute('data-target'));
-const duration = 2000;
-let start = 0;
-const increment = target / (duration / 16);
-
-const updateCounter = () => {
-start += increment;
-if (start < target) {
-counter.textContent = Math.floor(start);
-requestAnimationFrame(updateCounter);
-} else {
-counter.textContent = target + (target < 100 ? '+' : '');
-}
-};
-
-updateCounter();
-});
+if (!isMobile || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.animate-on-scroll, .animate-slide-up, .animate-float').forEach(el => {
+    observer.observe(el);
+  });
 }
 
+
+let ticking = false;
+function updateNavbar() {
+  const navbar = document.getElementById('navbar');
+  const scrolled = window.pageYOffset;
+  
+  if (scrolled > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  ticking = false;
+}
 
 window.addEventListener('scroll', () => {
-const navbar = document.getElementById('navbar');
-const scrolled = window.pageYOffset;
+  if (!ticking) {
+    requestAnimationFrame(updateNavbar);
+    ticking = true;
+  }
+});
 
-if (scrolled > 100) {
-navbar.classList.add('scrolled');
-} else {
-navbar.classList.remove('scrolled');
+if (!isMobile) {
+  let parallaxTicking = false;
+  function updateParallax() {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero-particles .particle');
+    
+    parallaxElements.forEach((element, index) => {
+      const speed = 0.3 + (index * 0.1); // Velocidad reducida
+      element.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+    parallaxTicking = false;
+  }
+  
+  window.addEventListener('scroll', () => {
+    if (!parallaxTicking) {
+      requestAnimationFrame(updateParallax);
+      parallaxTicking = true;
+    }
+  });
 }
-});
-
-
-window.addEventListener('scroll', () => {
-const scrolled = window.pageYOffset;
-const parallaxElements = document.querySelectorAll('.hero-particles .particle');
-
-parallaxElements.forEach((element, index) => {
-const speed = 0.5 + (index * 0.1);
-element.style.transform = `translateY(${scrolled * speed}px)`;
-});
-});
-
 
 window.addEventListener('load', () => {
-document.body.classList.add('loaded');
+  document.body.classList.add('loaded');
 });
 
 
-document.addEventListener('mousemove', (e) => {
-const cursor = document.querySelector('.custom-cursor');
-if (cursor) {
-cursor.style.left = e.clientX + 'px';
-cursor.style.top = e.clientY + 'px';
+if (!isMobile) {
+  document.addEventListener('mousemove', (e) => {
+    const cursor = document.querySelector('.custom-cursor');
+    if (cursor) {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    }
+  });
 }
-});
 </script>
 </body>
 </html>
