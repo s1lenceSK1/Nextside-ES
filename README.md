@@ -1,6 +1,6 @@
 # Nextside — Comunidad de Programación
 
-<img src="next.png" alt="Nextside logo" width="160" style="margin-bottom: 15px;" />
+<img src="iconns.png" alt="Nextside logo" width="160" style="margin-bottom: 15px;" />
 
 Nextside es una **comunidad para desarrolladores de todo tipo**, donde tanto principiantes como expertos pueden aprender, compartir, crear y crecer juntos. Es un espacio abierto para hacer networking, resolver dudas, encontrar proyectos y generar vínculos dentro del mundo de la programación.
 
@@ -15,7 +15,9 @@ Nextside es una **comunidad para desarrolladores de todo tipo**, donde tanto pri
 - Paleta de colores en dorado y crema  
 - Enlaces a recursos para frontend y backend  
 - Invitación directa a la comunidad en Discord  
-- Footer con enlaces a los perfiles de los fundadores  
+- Footer con enlaces a los perfiles de los fundadores
+- Seccion de Nexyde Bot, con la informacion completa del bot, comandos, y mas.
+- Seccion de Staff de Nexyde, con el Discord de cada uno, y sus GitHub
 
 
 ---
@@ -23,7 +25,7 @@ Nextside es una **comunidad para desarrolladores de todo tipo**, donde tanto pri
 ## Instalación y uso local
 
 1. Descarga o clona este repositorio.  
-2. Asegúrate de que los archivos `index.html`, `style.css` y `next.png` se encuentren en la misma carpeta.  
+2. Asegúrate de que todos los archivos esten en la misma carpeta.
 3. Abre `index.html` en tu navegador.  
 
 ---
@@ -31,7 +33,8 @@ Nextside es una **comunidad para desarrolladores de todo tipo**, donde tanto pri
 ## Tecnologías utilizadas
 
 - HTML5  
-- CSS3 (custom + Bootstrap 5)  
+- CSS3 (custom + Bootstrap 5)
+- JavaScript
 - [Bootstrap 5 CDN](https://getbootstrap.com/)  
 - [FontAwesome CDN](https://fontawesome.com/)  
 - Google Fonts (Inter)  
@@ -52,4 +55,4 @@ Participa en un espacio colaborativo y lleva tu desarrollo al siguiente nivel.
 
 ---
 
-**Nextside — Comunidad de programación web. Juntos construimos el futuro del desarrollo.**
+**Nextside — Comunidad de programación. Juntos construimos el futuro del desarrollo.**
