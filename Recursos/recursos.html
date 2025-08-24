@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nextside — Recursos de Programación</title>
+<link rel="icon" href="../img/iconns.png" type="image/x-icon">
+
+<!-- Preload critical resources -->
+<link rel="preload" href="../Main/style.css" as="style">
+<link rel="preload" href="../img/iconns.png" as="image">
+<link rel="stylesheet" href="../Recursos/recursos.css">
+
+<!-- Meta tags -->
+<meta property="og:title" content="Nextside — Recursos">
+<meta property="og:description" content="Descubre los mejores recursos para desarrolladores: herramientas, tutoriales, librerías y guías especializadas en frontend, backend y más.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+<style>
+:root {
+--primary-gold: #FFD700;
+--secondary-gold: #ffae00;
+--dark-gold: #B8860B;
+--light-gold: #FFF8DC;
+--cream: #FFFEF7;
+  --dark-primary: #0D1117;
+  --dark-secondary: #161B22;
+  --dark-tertiary: #21262D;
+  --dark-card: #1C2128;
+  --dark-border: #30363D;
+  --dark-text: #F0F6FC;
+  --dark-text-secondary: #8B949E;
+  --dark-text-muted: #656D76;
+--gray-text: #6B7280;
+--white: #FFFFFF;
+
+/* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+  --gradient-warm: linear-gradient(135deg, #FFBF00 0%, #FFD700 100%);
+  --gradient-dark: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #21262D 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 165, 0, 0.05) 100%);
+  --gradient-glow: radial-gradient(circle, rgba(255, 215, 0, 0.4), transparent 70%);
+  
+  /* Shadows*/
+  --shadow-soft: 0 2px 10px rgba(255, 215, 0, 0.1);
+  --shadow-medium: 0 8px 30px rgba(255, 215, 0, 0.2);
+  --shadow-heavy: 0 20px 60px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 30px rgba(255, 215, 0, 0.3);
+  --shadow-text: 0 2px 8px rgba(0, 0, 0, 0.3);
+  
+  /* Animation Variables */
+  --animation-speed-fast: 0.2s;
+  --animation-speed-medium: 0.4s;
+  --animation-speed-slow: 0.8s;
+  --easing-smooth: cubic-bezier(0.23, 1, 0.32, 1);
+  --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background: var(--gradient-dark);
+color: var(--dark-text);
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* Animated Background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: var(--gradient-dark);
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--gradient-glow);
+  animation: floatAdvanced 32s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  right: 10%;
+  animation-delay: -8s;
+}
+
+.shape-3 {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  left: 50%;
+  animation-delay: -16s;
+}
+
+@keyframes floatAdvanced {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+    opacity: 0.03;
+  }
+  25% {
+    transform: translateY(-50px) translateX(30px) rotate(90deg) scale(1.1);
+    opacity: 0.05;
+  }
+  50% {
+    transform: translateY(-20px) translateX(-40px) rotate(180deg) scale(0.9);
+    opacity: 0.02;
+  }
+  75% {
+    transform: translateY(30px) translateX(20px) rotate(270deg) scale(1.2);
+    opacity: 0.04;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(360deg) scale(1);
+    opacity: 0.03;
+  }
+}
+
+/* Navigation */
+.navbar {
+  background: rgba(13, 17, 23, 0.9);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--dark-border);
+  padding: 1rem 0;
+  transition: all var(--animation-speed-medium) var(--easing-smooth);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-soft);
+}
+
+.navbar.scrolled {
+  background: rgba(13, 17, 23, 0.95);
+  box-shadow: var(--shadow-medium);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all var(--animation-speed-medium) var(--easing-smooth);
+}
+
+.logo-img {
+  height: 45px;
+  margin-right: 12px;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+}
+
+.brand-text {
+  font-weight: 800;
+  font-size: 1.6rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav-link-custom {
+  color: var(--dark-text) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 12px;
+  transition: all var(--animation-speed-medium) var(--easing-smooth);
+}
+
+.nav-link-custom:hover {
+  color: white !important;
+  background: var(--gradient-primary);
+  transform: translateY(-2px);
+}
+
+/* Resources Section */
+.resources-section {
+  padding: 140px 0 100px;
+  position: relative;
+  background: var(--dark-secondary);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-gold);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--dark-text);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: var(--dark-text-secondary);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+/* Search and Filter Controls */
+.search-filter-container {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  background: rgba(28, 33, 40, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--dark-border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow-medium);
+}
+
+.search-bar {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1.5rem;
+  background: rgba(13, 17, 23, 0.6);
+  border: 2px solid var(--dark-border);
+  border-radius: 16px;
+  color: var(--dark-text);
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all var(--animation-speed-medium) var(--easing-smooth);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.1);
+  background: rgba(13, 17, 23, 0.8);
+}
+
+.search-input::placeholder {
+  color: var(--dark-text-muted);
+}
+
+.search-icon {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark-text-muted);
+  font-size: 1.2rem;
+  transition: color var(--animation-speed-medium);
+}
+
+.search-input:focus + .search-icon {
+  color: var(--primary-gold);
+}
+
+.filter-tags {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-tag {
+  padding: 0.75rem 1.5rem;
+  background: rgba(13, 17, 23, 0.6);
+  border: 2px solid var(--dark-border);
+  border-radius: 50px;
+  color: var(--dark-text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--animation-speed-medium) var(--easing-bounce);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  transition: left var(--animation-speed-medium) var(--easing-smooth);
+  z-index: -1;
+}
+
+.filter-tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 215, 0, 0.5);
+  color: var(--primary-gold);
+}
+
+.filter-tag.active {
+  background: var(--gradient-primary);
+  border-color: var(--primary-gold);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.filter-tag.active::before {
+  left: 0;
+}
+
+.results-count {
+  text-align: center;
+  margin: 2rem 0 3rem;
+  font-size: 1.1rem;
+  color: var(--dark-text-secondary);
+  font-weight: 500;
+}
+
+/* Resources Grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.resource-card {
+  background: rgba(28, 33, 40, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--dark-border);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all var(--animation-speed-slow) var(--easing-smooth);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.resource-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: conic-gradient(from 0deg, transparent, var(--primary-gold), transparent);
+  opacity: 0;
+  transition: all var(--animation-speed-slow) var(--easing-smooth);
+  animation: borderRotate 6s linear infinite;
+  border-radius: 22px;
+  z-index: -1;
+}
+
+.resource-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--dark-card);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+@keyframes borderRotate {
+  100% { transform: rotate(360deg); }
+}
+
+.resource-card:hover::before {
+  opacity: 0.8;
+}
+
+.resource-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-heavy);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.resource-card.hidden {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  pointer-events: none;
+}
+
+.resource-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.resource-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.resource-category {
+  padding: 0.5rem 1rem;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-soft);
+}
+
+.resource-description {
+  color: var(--dark-text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.resource-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--animation-speed-medium) var(--easing-smooth);
+  font-size: 0.95rem;
+}
+
+.resource-link:hover {
+  color: var(--secondary-gold);
+  transform: translateX(5px);
+}
+
+.resource-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.resource-tag {
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: var(--primary-gold);
+  font-weight: 500;
+}
+
+/* No Results State */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: none;
+}
+
+.no-results.show {
+  display: block;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  color: var(--dark-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.no-results h3 {
+  font-size: 1.8rem;
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.no-results p {
+  color: var(--dark-text-secondary);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Loading Animation */
+.loading {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.loading.show {
+  display: flex;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 215, 0, 0.3);
+  border-top: 3px solid var(--primary-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .resources-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-section {
+    padding: 120px 0 80px;
+  }
+  
+  .search-filter-container {
+    margin: 0 1rem 3rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .filter-tags {
+    gap: 0.75rem;
+  }
+  
+  .filter-tag {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .resource-card {
+    padding: 1.5rem;
+  }
+  
+  .resource-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .resource-category {
+    align-self: flex-start;
+  }
+  
+  .resource-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .search-input {
+    padding: 0.875rem 2.5rem 0.875rem 1.25rem;
+    font-size: 1rem;
+  }
+  
+  .filter-tag {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .resource-card {
+    padding: 1.25rem;
+  }
+  
+  .resource-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s var(--easing-smooth);
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .floating-shape {
+    animation: none !important;
+    opacity: 0.1 !important;
+  }
+  
+  .resource-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .search-filter-container {
+    backdrop-filter: none;
+    background: rgba(28, 33, 40, 0.95);
+  }
+}
+
+/* Accessibility improvements */
+.filter-tag:focus,
+.search-input:focus {
+  outline: 2px solid var(--primary-gold);
+  outline-offset: 2px;
+}
+
+.resource-link:focus {
+  outline: 2px solid var(--primary-gold);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .resource-card,
+  .filter-tag,
+  .nav-link-custom {
+    transition: none !important;
+  }
+}
+</style>
+
+<script>
+const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+if (isMobile) {
+  document.documentElement.classList.add('is-mobile');
+}
+</script>
+</head>
+<body>
+
+<!-- Shapes Background -->
+<div class="animated-bg">
+<div class="floating-shape shape-1"></div>
+<div class="floating-shape shape-2"></div>
+<div class="floating-shape shape-3"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+<div class="logo-wrapper">
+<img src="../img/iconns.png" alt="Nextside Logo" class="logo-img" loading="eager" width="45" height="45">
+</div>
+<span class="brand-text">Nextside</span>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link nav-link-custom" href="../Main/index.html">Inicio</a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-link-custom" href="../Staff/staff.html">Nosotros</a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-link-custom" href="../Bot/bot.html">Nexyde Bot</a>
+</li>
+
+
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Resources Section -->
+<section class="resources-section" id="recursos">
+<div class="container">
+<!-- Header -->
+<div class="section-header">
+<div class="section-badge fade-in-up">
+<i class="fas fa-book-open"></i>
+<span>Recursos</span>
+</div>
+<h2 class="section-title fade-in-up">Descubre los mejores <span class="gradient-text">recursos</span></h2>
+<p class="section-description fade-in-up">
+Encuentra herramientas, tutoriales, librerías y guías especializadas para llevar tus habilidades de programación al siguiente nivel
+</p>
+</div>
+
+<!-- Search and Filter Controls -->
+<div class="search-filter-container fade-in-up">
+<div class="search-bar">
+<input 
+  type="text" 
+  class="search-input" 
+  id="searchInput" 
+  placeholder="Buscar recursos, herramientas, librerías..."
+  autocomplete="off"
+  aria-label="Buscar recursos"
+>
+<i class="fas fa-search search-icon" aria-hidden="true"></i>
+</div>
+<div class="filter-tags" role="group" aria-label="Filtrar recursos por categoría">
+<button class="filter-tag active" data-category="todos" aria-pressed="true">
+  <i class="fas fa-globe"></i> Todos
+</button>
+<button class="filter-tag" data-category="recurso" aria-pressed="false">
+  <i class="fas fa-tools"></i> Recurso
+</button>
+<button class="filter-tag" data-category="frontend" aria-pressed="false">
+  <i class="fas fa-code"></i> Frontend
+</button>
+<button class="filter-tag" data-category="backend" aria-pressed="false">
+  <i class="fas fa-server"></i> Backend
+</button>
+<button class="filter-tag" data-category="otro" aria-pressed="false">
+  <i class="fas fa-plus-circle"></i> Otro
+</button>
+</div>
+</div>
+
+<!-- Results Count -->
+<div class="results-count" id="resultsCount" aria-live="polite">
+Mostrando <span id="currentCount">18</span> recursos
+</div>
+
+<!-- Loading -->
+<div class="loading" id="loading" aria-hidden="true">
+<div class="spinner"></div>
+</div>
+
+<!-- Resources Grid -->
+<div class="resources-grid" id="resourcesGrid">
+<!-- Resource Cards will be populated by JavaScript -->
+</div>
+
+<!-- No Results -->
+<div class="no-results" id="noResults" aria-hidden="true">
+<div class="no-results-icon">
+<i class="fas fa-search"></i>
+</div>
+<h3>No se encontraron recursos</h3>
+<p>No pudimos encontrar recursos que coincidan con tu búsqueda. Intenta con otras palabras clave o selecciona una categoría diferente.</p>
+</div>
+</div>
+</section>
+
+<!-- Back to Home -->
+<section class="back-home">
+  <div class="container">
+  <a href="../Main/index.html" class="btn-back">
+  <i class="fas fa-arrow-left"></i>
+  Volver al Inicio
+  </a>
+  </div>
+  </section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
+
+<script>
+// Sample data - Reemplaza esto con tus recursos reales
+const resourcesData = [
+  {
+    id: 1,
+    title: "Cursos de IA",
+    description: "Cursos de IA. Hay multiples cosas, pero lo principal es Prompting. Chusmeen un poco, y si gustan se inscriben a unos cuantos",
+    category: "otro",
+    tags: ["IA", "Cursos"],
+    link: "https://discord.com/channels/1401348660800917644/1408570928815673474",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Cursos de programacion - Buenos Aires",
+    description: "Organizacion de Argentina, Buenos Aires, que brinda cursos de: Desarollo Web, IA con Python, UI/UX, y Desarrollo de Videojuegos",
+    category: "recurso",
+    tags: ["Cursos", "Online"],
+    link: "https://talentotech.bue.edu.ar/#/"
+   
+  },
+  {
+    id: 3,
+    title: "Mostrar perfil de discord en README de GitHub",
+    description: "El tutorial completo se encuentra en el repositorio del propietario, pueden colocar su perfil/estado de discord en su readme de github, y personalizar colores, y mucho mas. ",
+    category: "recurso",
+    tags: ["GitHub", "Discord"],
+    link: "https://github.com/cnrad/lanyard-profile-readme"
+  },
+  {
+    id: 4,
+    title: "CSS Minifier",
+    description: "Aplicacion web para acortar CSS, lo amontona todo y se acorta demasiado.",
+    category: "otro",
+    tags: ["CSS", "Aplicacion"],
+    link: "https://www.toptal.com/developers/cssminifier"
+  },
+  {
+    id: 5,
+    title: "YAD",
+    description: "YAD es un formato de archivo inspirado por JSON y BSON, se basa en filas con nombre donde cada fila puede contener claves con nombre y valores asociados a cada clave.",
+    category: "backend",
+    tags: ["Rust", "Binary File"],
+    link: "https://crates.io/crates/yad_core"
+  },
+  {
+    id: 6,
+    title: "ShareX",
+    description: "ShareX es una aplicación gratuita y de código abierto que permite a los usuarios capturar o grabar cualquier área de su pantalla con solo pulsar una tecla. También admite la carga de imágenes, texto y diversos tipos de archivos a una amplia gama de destinos.",
+    category: "backend",
+    tags: ["App", "Open Source"],
+    link: "https://github.com/ShareX/ShareX"
+  },
+  {
+    id: 7,
+    title: "HTTP Cat",
+    description: "Existe esta pagina orientada a cada tipo de status code con gatos. Siendo bastante original",
+    category: "recurso",
+    tags: ["API", "Status"],
+    link: "https://http.cat/"
+  },
+  {
+    id: 8,
+    title: "Nuevo Cliente para Discord",
+    description: "Buenas, recientemente he desarrollado este cliente para interactuar con la api de discord, está hecho con una sola dependencia (discord-api-types), y está enfocado en la eficiencia y la manipulación cruda de la api de discord, aquí les dejo el NPM",
+    category: "recurso",
+    tags: ["Discord", "Cliente"],
+    link: "https://www.npmjs.com/package/bighorn?activeTab=readme"
+  },
+  {
+    id: 9,
+    title: "Documentacion JavaScript",
+    description: "Sitio web de documentacion full de JavaScript, es bastante completa y la estetica es bonita. Recomendada",
+    category: "recurso",
+    tags: ["Documentacion", "Informacion"],
+    link: "https://javascript.info/"
+  },
+  {
+    id: 10,
+    title: "Explicacion de Bitfields",
+    description: "Breve explicacion de como manejar bitfields en TS. Explicacion completa en Discord.",
+    category: "otro",
+    tags: ["Bitfields", "TypeScript"],
+    link: "https://discord.com/channels/1401348660800917644/1406501910759997550"
+  },
+  {
+    id: 11,
+    title: "Discord Spammer Python - Exe",
+    description: "Herramienta capaz de enviar embeds spammer mediante WebHooks. Esta herramienta fue creada con fines educativos y eticos.",
+    category: "recurso",
+    tags: ["Python", "Discord"],
+    link: "https://github.com/Marli-77/Discord-Spammer-Tool"
+  },
+  {
+    id: 12,
+    title: "APIs Publicas",
+    description: "Lista masiva de APIs publicas y gratuitas para lo que se imaginen, hay desde datos de la NASA hasta APIs del clima o de memes ",
+    category: "recurso",
+    tags: ["GraphQL", "API", "Query Language", "Tutorial"],
+    link: "https://graphql.org/learn/"
+  },
+  {
+    id: 13,
+    title: "Roadmap para desarolladores",
+    description: "Web donde puedes encontrar roadmaps para ser front-end, back-end, mobile, data engineer e incluso no solo en areas, si no de lenguajes, desde TypeScript, Go, Rust, Java, PHP, Flutter e incluso tu mismo puedes crear tus propios roadmaps",
+    category: "otro",
+    tags: ["Roadmap", "Desarolladores"],
+    link: "https://roadmap.sh/"
+  },
+  {
+    id: 14,
+    title: "DevDoc - Documentacion en un solo lugar",
+    description: "Web donde podes encontrar toda la documentacion que necesitas de casi cualquier lenguaje, hay desde alt nivel como JS, TS, Lua, Python, hasta bajo nivel como C++, C, Rust, Zig, y muchos lenguajes!.",
+    category: "recurso",
+    tags: ["Documentacion", "Lenguajes"],
+    link: "https://devdocs.io/"
+  },
+  {
+    id: 15,
+    title: "Tutoriales Frontend en ES",
+    description: "Les recomiendo este sitio en ES, para aprender HTML, CSS, JS, y los mejores frameworks. Tambien tienen muchos mas tutoriales/documentaciones, se las recomiendo al 100%",
+    category: "recurso",
+    tags: ["Frontend", "Documentacion"],
+    link: "https://manz.dev/"
+  },
+  {
+    id: 16,
+    title: "W3 Schools",
+    description: "El mejor sitio para aprender CUALQUIER lenguaje que te interese. Recomendado al 1000%",
+    category: "otro",
+    tags: ["Documentaciones", "General"],
+    link: "https://www.w3schools.com/"
+  },
+  {
+    id: 17,
+    title: "View transitions en Astro",
+    description: "Mini tutorial de como hacer una view transition en Astro. Sencillo y basico.",
+    category: "frontend",
+    tags: ["Astro", "Web"],
+    link: "https://discord.com/channels/1401348660800917644/1405375116543660032"
+  }
+];
+
+let filteredResources = [...resourcesData];
+let currentFilter = 'todos';
+let searchTerm = '';
+
+// DOM Elements
+const searchInput = document.getElementById('searchInput');
+const filterTags = document.querySelectorAll('.filter-tag');
+const resourcesGrid = document.getElementById('resourcesGrid');
+const resultsCount = document.getElementById('resultsCount');
+const currentCount = document.getElementById('currentCount');
+const noResults = document.getElementById('noResults');
+const loading = document.getElementById('loading');
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+  renderResources();
+  setupEventListeners();
+  setupScrollAnimations();
+  updateNavbar();
+});
+
+// Event Listeners
+function setupEventListeners() {
+  // Search input
+  searchInput.addEventListener('input', debounce(handleSearch, 300));
+  
+  // Filter tags
+  filterTags.forEach(tag => {
+    tag.addEventListener('click', () => handleFilterChange(tag));
+    tag.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleFilterChange(tag);
+      }
+    });
+  });
+  
+  // Navbar scroll
+  window.addEventListener('scroll', updateNavbar);
+  
+  // Keyboard navigation for search
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      searchInput.value = '';
+      handleSearch(e);
+    }
+  });
+}
+
+// Search functionality
+function handleSearch(e) {
+  searchTerm = e.target.value.toLowerCase().trim();
+  showLoading();
+  
+  setTimeout(() => {
+    filterResources();
+    hideLoading();
+  }, 200);
+}
+
+// Filter functionality
+function handleFilterChange(clickedTag) {
+  // Update active filter
+  filterTags.forEach(tag => {
+    tag.classList.remove('active');
+    tag.setAttribute('aria-pressed', 'false');
+  });
+  clickedTag.classList.add('active');
+  clickedTag.setAttribute('aria-pressed', 'true');
+  
+  currentFilter = clickedTag.dataset.category;
+  showLoading();
+  
+  setTimeout(() => {
+    filterResources();
+    hideLoading();
+  }, 200);
+}
+
+// Filter resources based on search and category
+function filterResources() {
+  filteredResources = resourcesData.filter(resource => {
+    const matchesCategory = currentFilter === 'todos' || resource.category === currentFilter;
+    const matchesSearch = searchTerm === '' || 
+      resource.title.toLowerCase().includes(searchTerm) ||
+      resource.description.toLowerCase().includes(searchTerm) ||
+      resource.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+    
+    return matchesCategory && matchesSearch;
+  });
+  
+  renderResources();
+  updateResultsCount();
+}
+
+// Render resources to the grid
+function renderResources() {
+  if (filteredResources.length === 0) {
+    resourcesGrid.style.display = 'none';
+    noResults.classList.add('show');
+    noResults.setAttribute('aria-hidden', 'false');
+    return;
+  }
+  
+  resourcesGrid.style.display = 'grid';
+  noResults.classList.remove('show');
+  noResults.setAttribute('aria-hidden', 'true');
+  
+  resourcesGrid.innerHTML = filteredResources.map(resource => createResourceCard(resource)).join('');
+  
+  // Animate cards
+  setTimeout(() => {
+    document.querySelectorAll('.resource-card').forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('fade-in-up', 'visible');
+      }, index * 100);
+    });
+  }, 100);
+}
+
+// Create individual resource card
+function createResourceCard(resource) {
+  const categoryIcons = {
+    frontend: 'fas fa-code',
+    backend: 'fas fa-server',
+    recurso: 'fas fa-tools',
+    otro: 'fas fa-plus-circle'
+  };
+  
+  const categoryColors = {
+    frontend: 'linear-gradient(135deg, #61DAFB 0%, #21D4FD 100%)',
+    backend: 'linear-gradient(135deg, #4CAF50 0%, #45A049 100%)',
+    recurso: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)',
+    otro: 'linear-gradient(135deg, #9C27B0 0%, #673AB7 100%)'
+  };
+  
+  return `
+    <div class="resource-card fade-in-up" data-category="${resource.category}">
+      <div class="resource-header">
+        <h3 class="resource-title">${resource.title}</h3>
+        <div class="resource-category" style="background: ${categoryColors[resource.category]}">
+          <i class="${categoryIcons[resource.category]}"></i>
+          ${resource.category.charAt(0).toUpperCase() + resource.category.slice(1)}
+        </div>
+      </div>
+      
+      <p class="resource-description">${resource.description}</p>
+      
+      <div class="resource-footer">
+        <a href="${resource.link}" class="resource-link" target="_blank" rel="noopener" aria-label="Ver recurso: ${resource.title}">
+          <span>Ver recurso</span>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        
+        <div class="resource-tags">
+          ${resource.tags.slice(0, 3).map(tag => 
+            `<span class="resource-tag">${tag}</span>`
+          ).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Update results count
+function updateResultsCount() {
+  currentCount.textContent = filteredResources.length;
+  
+  if (searchTerm) {
+    resultsCount.innerHTML = `
+      Mostrando <span id="currentCount">${filteredResources.length}</span> resultados para 
+      "<strong>${searchTerm}</strong>"
+    `;
+  } else if (currentFilter !== 'todos') {
+    resultsCount.innerHTML = `
+      Mostrando <span id="currentCount">${filteredResources.length}</span> recursos en 
+      "<strong>${currentFilter.charAt(0).toUpperCase() + currentFilter.slice(1)}</strong>"
+    `;
+  } else {
+    resultsCount.innerHTML = `
+      Mostrando <span id="currentCount">${filteredResources.length}</span> recursos
+    `;
+  }
+}
+
+// Loading states
+function showLoading() {
+  loading.classList.add('show');
+  loading.setAttribute('aria-hidden', 'false');
+  resourcesGrid.style.opacity = '0.5';
+}
+
+function hideLoading() {
+  loading.classList.remove('show');
+  loading.setAttribute('aria-hidden', 'true');
+  resourcesGrid.style.opacity = '1';
+}
+
+// Debounce function for search
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Navbar scroll effect
+function updateNavbar() {
+  const navbar = document.getElementById('navbar');
+  const scrolled = window.pageYOffset;
+  
+  if (scrolled > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+}
+
+// Scroll animations
+function setupScrollAnimations() {
+  const observerOptions = {
+    threshold: isMobile ? 0.05 : 0.1,
+    rootMargin: isMobile ? '0px' : '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  
+  if (!isMobile || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+      observer.observe(el);
+    });
+  }
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: isMobile ? 'auto' : 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Load state
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
+</script>
+</body>
+</html>

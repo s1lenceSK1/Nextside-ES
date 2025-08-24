@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextside - Nexyde Bot</title>
+    <link rel="icon" href="../img/nexy.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Bot/bot.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../Main/index.html">
+                <div class="logo-wrapper">
+                    <img src="../img/iconns.png" alt="Nextside Logo" class="logo-img" loading="eager" width="45" height="45">
+                </div>
+                <span class="brand-text">Nextside</span>
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="../Main/index.html" rel="noopener">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="../Recursos/recursos.html" rel="noopener">Recursos</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="../Staff/staff.html" rel="noopener">Nosotros</a>
+                    </li>
+                  
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="nexyde-section">
+        <div class="nexyde-bg"></div>
+        
+        <div class="container">
+            <div class="nexyde-header">
+                <div class="bot-badge">
+                    <i class="fas fa-robot"></i>
+                    <span>Discord Bot</span>
+                </div>
+                
+                <h1 class="nexyde-title">
+                    Conoce a <span class="title-highlight">Nexyde</span>
+                </h1>
+                
+                <p class="nexyde-description">
+                    El bot oficial de Nextside que revoluciona tu experiencia en Discord. Con IA integrada de Gemini y una amplia gama de comandos, Nexyde está diseñado para hacer tu servidor más dinámico e interactivo.
+                </p>
+
+                <div class="bot-profile">
+                    <div class="bot-avatar">
+                        <img src="../img/nexy.png" alt="Nexyde Bot Avatar" onerror="this.style.display='none'">
+                        <div class="bot-status"></div>
+                    </div>
+                    <div class="bot-info">
+                        <div class="bot-name">
+                            Nexyde 
+                            <span class="ai-badge">
+                                <i class="fas fa-brain"></i>
+                                IA Gemini
+                            </span>
+                        </div>
+                        <div class="bot-tag">Nexyde#0610</div>
+                        <div class="bot-description">
+                            <strong>Official NextSide Bot</strong><br>
+                            <strong>Powered by:</strong> s1lence.cs<br>
+                            <strong>Creado:</strong> 10 de Agosto, 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="stat-number">13</div>
+                    <div class="stat-label">Comandos Disponibles</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="stat-number">AI</div>
+                    <div class="stat-label">Gemini Integrado</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Disponible</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Confiable</div>
+                </div>
+                <br>
+               
+
+            </div>
+
+
+            <div class="commands-grid">
+                <div class="command-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="category-title">Moderación</h3>
+                    </div>
+                    <ul class="command-list">
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/ban</h4>
+                                <p>Banea a un usuario del servidor de forma permanente</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/unban</h4>
+                                <p>Desbanea a un usuario del servidor mediante su ID</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/kick</h4>
+                                <p>Expulsa a un usuario del servidor temporalmente</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-eraser"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/clear</h4>
+                                <p>Borra mensajes en masa de un canal específico</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-eraser"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/timeout</h4>
+                                <p>Aisla a un usuario temporalmente.</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/vip</h4>
+                                <p>Otorga o quita manualmente el rol de VIP a un usuario</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+
+
+                <div class="command-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <h3 class="category-title">Información</h3>
+                    </div>
+                    <ul class="command-list">
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/userinfo</h4>
+                                <p>Muestra información detallada de un usuario del servidor</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/server</h4>
+                                <p>Muestra información completa sobre nuestro servidor</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/ayuda</h4>
+                                <p>Muestra los comandos disponibles del servidor</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/info</h4>
+                                <p>Información sobre el servidor y estadísticas del bot</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/avatar</h4>
+                                <p>Muestra la foto de perfil de cualquier usuario</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+             
+
+                <div class="command-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="category-title">Desarrollo</h3>
+                    </div>
+                    <ul class="command-list">
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/doc</h4>
+                                <p>Obtén el enlace de la documentación oficial del lenguaje que selecciones</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/lenguaje</h4>
+                                <p>Da una breve descripcion del lenguaje seleccionado</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/snippet</h4>
+                                <p>Muestra un snipett de codigo del lenguaje que selecciones</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="command-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="category-title">Entretenimiento</h3>
+                    </div>
+                    <ul class="command-list">
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-laugh"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/chiste</h4>
+                                <p>Cuenta un chiste aleatorio de programación</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/confesion</h4>
+                                <p>Confiesa anónimamente en el servidor</p>
+                            </div>
+                        </li>
+                        <li class="command-item">
+                            <div class="command-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="command-details">
+                                <h4>/say</h4>
+                                <p>Hace que Nexyde diga lo que le escribas</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="cta-section">
+                <h2 class="cta-title">¿Queres probar y usar nuestro bot?</h2>
+                <p class="cta-description">
+                    Unete a nuestro servidor de Discord y descubre todas las funcionalidades que puede ofrecerte. IA integrada, comandos útiles y mucho más. Nexyde te espera!
+                </p>
+                <a href="https://discord.com/channels/1401348660800917644/1407400806205882439" class="invite-btn">
+                    <i class="fab fa-discord"></i>
+                    <span>Usar a Nexyde</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animaciones cuando aparecen en el viewport
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animaciones
+        document.querySelectorAll('.command-category, .stat-card, .bot-profile').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Efecto de hover en las tarjetas de comando
+        document.querySelectorAll('.command-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(8px) scale(1.02)';
+                this.style.boxShadow = '0 8px 25px rgba(255, 215, 0, 0.2)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0) scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Animación de escritura para el título
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Contador animado para estadísticas
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 50);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 50);
+        }
+
+        // Iniciar animaciones cuando la página carga
+        window.addEventListener('load', () => {
+            // Animar contadores
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach((stat, index) => {
+                const target = stat.textContent;
+                if (!isNaN(target)) {
+                    setTimeout(() => {
+                        animateCounter(stat, parseInt(target), 1500);
+                    }, index * 300);
+                }
+            });
+
+            // Efecto parallax suave en el fondo
+            let ticking = false;
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                document.querySelector('.nexyde-bg').style.transform = `translate3d(0, ${rate}px, 0)`;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            });
+        });
+
+        // Efecto de partículas en el fondo (versión optimizada)
+        function createParticles() {
+            const particleCount = window.innerWidth > 768 ? 15 : 8;
+            const container = document.querySelector('.nexyde-bg');
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: absolute;
+                    width: ${Math.random() * 4 + 2}px;
+                    height: ${Math.random() * 4 + 2}px;
+                    background: ${Math.random() > 0.5 ? '#FFD700' : '#5865F2'};
+                    border-radius: 50%;
+                    opacity: ${Math.random() * 0.5 + 0.3};
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation: float ${Math.random() * 10 + 10}s linear infinite;
+                    animation-delay: ${Math.random() * 5}s;
+                `;
+                container.appendChild(particle);
+            }
+        }
+
+        // CSS para animación de partículas
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes float {
+                0% {
+                    transform: translateY(0px) rotate(0deg);
+                    opacity: 0.3;
+                }
+                50% {
+                    transform: translateY(-100px) rotate(180deg);
+                    opacity: 0.8;
+                }
+                100% {
+                    transform: translateY(-200px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+
+            .command-item {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .command-category {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            .stat-card {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            .bot-profile {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            /* Modo oscuro mejorado para mejor contraste */
+            @media (prefers-color-scheme: dark) {
+                .command-item {
+                    background: rgba(255, 215, 0, 0.08);
+                    border-color: rgba(255, 215, 0, 0.15);
+                }
+                
+                .command-item:hover {
+                    background: rgba(255, 215, 0, 0.15);
+                    border-color: rgba(255, 215, 0, 0.4);
+                }
+            }
+
+            /* Optimizaciones para dispositivos móviles */
+            @media (max-width: 768px) {
+                .nexyde-bg {
+                    animation: none !important;
+                    transform: none !important;
+                }
+                
+                .command-category::before,
+                .command-item::before {
+                    display: none;
+                }
+                
+                .command-category:hover {
+                    transform: translateY(-4px);
+                }
+                
+                .command-item:hover {
+                    transform: translateX(3px) scale(1);
+                }
+            }
+
+            /* Accesibilidad mejorada */
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                }
+            }
+
+            /* Estados de focus para navegación por teclado */
+            .command-item:focus,
+            .invite-btn:focus {
+                outline: 2px solid var(--primary-gold);
+                outline-offset: 2px;
+            }
+
+            .invite-btn:focus {
+                box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Crear partículas solo en desktop
+        if (window.innerWidth > 768) {
+            createParticles();
+        }
+
+        // Lazy loading para la imagen del avatar
+        const avatarImg = document.querySelector('.bot-avatar img');
+        if (avatarImg) {
+            avatarImg.addEventListener('error', function() {
+                // Crear un avatar de respaldo con iniciales
+                const fallback = document.createElement('div');
+                fallback.style.cssText = `
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background: var(--gradient-discord);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    border: 4px solid var(--discord-color);
+                    box-shadow: 0 0 30px rgba(88, 101, 242, 0.5);
+                `;
+                fallback.textContent = 'N';
+                this.parentNode.replaceChild(fallback, this);
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
+
+</body>
+</html>
