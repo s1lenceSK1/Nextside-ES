@@ -602,32 +602,32 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background: rgba(13, 17, 23, 0.95);
+    background: rgba(13, 17, 23, 0.9);
     backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid var(--dark-border);
     padding: 1rem 0;
-    transition: all 0.4s ease;
+    transition: all var(--animation-speed-medium) var(--easing-smooth);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow-soft);
-}
-
-.navbar.scrolled {
-    background: rgba(13, 17, 23, 0.98);
+  }
+  
+  .navbar.scrolled {
+    background: rgba(13, 17, 23, 0.95);
     box-shadow: var(--shadow-medium);
     padding: 0.75rem 0;
     border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-.navbar-brand {
+  }
+  
+  .navbar-brand {
     display: flex;
     align-items: center;
     text-decoration: none;
-    transition: all 0.4s ease;
+    transition: all var(--animation-speed-medium) var(--easing-smooth);
     position: relative;
-}
+  }
 
 .navbar-brand::before {
     content: '';
@@ -639,10 +639,10 @@ body {
     background: var(--gradient-primary);
     border-radius: 12px;
     opacity: 0;
-    transition: all 0.4s ease;
+    transition: all var(--animation-speed-medium) var(--easing-smooth);
     z-index: -1;
     filter: blur(10px);
-}
+  }
 
 .navbar-brand:hover::before {
     opacity: 0.2;
@@ -697,11 +697,11 @@ body {
     margin: 0 0.5rem;
     padding: 0.75rem 1.25rem !important;
     border-radius: 12px;
-    transition: all 0.4s ease;
+    transition: all var(--animation-speed-medium) var(--easing-smooth);
     position: relative;
     overflow: hidden;
     font-size: 0.95rem;
-}
+  }
 
 .nav-link-custom::before {
     content: '';
