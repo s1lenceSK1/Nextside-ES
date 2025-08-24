@@ -1539,3 +1539,46 @@ body.loaded .animate-on-scroll {
   }
 }
 
+
+
+/* Hamburger personalizado */
+.navbar-toggler.custom-toggler {
+  border: none;
+  width: 35px;
+  height: 40px;
+  position: relative;
+}
+
+.navbar-toggler.custom-toggler span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #e2a218;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animación al abrir el menu */
+.navbar-toggler.collapsed span:nth-child(1) {
+  transform: rotate(0) translate(0, 0);
+}
+
+.navbar-toggler.collapsed span:nth-child(2) {
+  opacity: 1;
+}
+
+.navbar-toggler.collapsed span:nth-child(3) {
+  transform: rotate(0) translate(0, 0);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
